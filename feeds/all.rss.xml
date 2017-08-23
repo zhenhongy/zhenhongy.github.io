@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Don</title><link>/</link><description></description><lastBuildDate>Wed, 23 Aug 2017 00:05:00 -0400</lastBuildDate><item><title>First Post</title><link>/first_post.html</link><description>&lt;h2&gt;Here we go&lt;/h2&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Baseball"&gt;Baseball&lt;a class="anchor-link" href="#Baseball"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;This is a Bayesian practice in analyzing Baseball statistics. Many thanks to the great blog @&lt;a href="http://varianceexplained.org/"&gt;Variance Explained&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="Objective"&gt;Objective&lt;a class="anchor-link" href="#Objective"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Faily evaluating the performance of a player could be hard sometimes when there is little information available. It might be suspicious to say a player, who keeps a …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Don(Zhenhong) Yang</dc:creator><pubDate>Wed, 23 Aug 2017 00:05:00 -0400</pubDate><guid isPermaLink="false">tag:None,2017-08-23:/first_post.html</guid><category>Data</category></item></channel></rss>
