@@ -96,10 +96,10 @@
         <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> Share</a>
 
         <section itemprop="articleBody"><blockquote>
-<p><em>"How many coffee shops in Boston?"</em>   <br>
-Hmmm...well, suppose there are 1 million people in Boston. Then... NOPE. Stop it. This series is nothing about strategy for any brain teaser.
-This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Donuts, "corporate + license" vs pure franchise, in Boston area. I will walk you through their distribution and strategies of choosing a location (if consistent). This series is roughly separated by following parts.</p>
+<p><em>"How many coffee shops in Boston?"</em></p>
 </blockquote>
+<p>Hmmm...well, suppose there are 1 million people in Boston. Then... NOPE. Stop it. This series is nothing about strategy for any brain teaser.
+This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Donuts, "corporate + license" vs pure franchise, in Boston area. I will walk you through their distribution and strategies of choosing a location (if consistent). This series is roughly separated by following parts.</p>
 <ul>
 <li>Part 0: Get the data prepared!</li>
 <li>Part 1: A glance at locations</li>
@@ -122,8 +122,7 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 
 
 <h2>Dunkin' wins in number, even within major battlefields</h2>
-<p><strong>150:79</strong>! Dunkin' nearly doubles the number of Starbucks in Boston. It could be the result of different ownership types and target markets. However, even in <em>major commercial areas</em> [2], 
-it is still easier to find a Dunkin'. </p>
+<p><strong>150:79</strong>! Dunkin' nearly doubles the number of Starbucks in Boston. It could be the result of different ownership types and target markets. However, even in <em>major commercial areas</em> [2], it is still easier to find a Dunkin'. </p>
 <div class="highlight"><pre><span></span><span class="n">commercial</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Boston  (Beacon  Hill)&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston (Chinatown/ Tufts Medical)&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston (Faneuil Hall marketplace/ north end)&#39;</span><span class="p">,</span> 
               <span class="s1">&#39;Boston (downtown crossing/ financial district)&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston Back Bay&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston Fenway&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston Kenmore&#39;</span><span class="p">,</span> 
               <span class="s1">&#39;Boston Seaport&#39;</span><span class="p">,</span> <span class="s1">&#39;Boston West End&#39;</span><span class="p">,</span> <span class="s1">&#39;East Boston&#39;</span><span class="p">]</span>
@@ -166,8 +165,7 @@ it is still easier to find a Dunkin'. </p>
 </tbody>
 </table>
 <p></center>
-Dunkin' covers almost wherever there's a Starbucks shop. Suppose our tolerance of walking to a coffeehouse is only about 10 minutes. Each germ-like colored area in map represents the region 
-with a coffeehouse covered. (Red is for Dunkin' and green is for Starbucks) Except the southwest Brookline area, Dunkin' totally wins Starbucks in the number of stores in Boston.</p>
+Dunkin' covers almost wherever there's a Starbucks shop. Suppose our tolerance of walking to a coffeehouse is only about 10 minutes. Each germ-like colored area in map represents the region with a coffeehouse covered. (Red is for Dunkin' and green is for Starbucks) Except the southwest Brookline area, Dunkin' totally wins Starbucks in the number of stores in Boston.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
 
 <span class="k">def</span> <span class="nf">pick_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">rank</span><span class="p">):</span>
@@ -195,8 +193,10 @@ with a coffeehouse covered. (Red is for Dunkin' and green is for Starbucks) Exce
 </pre></div>
 
 
-<p><img alt="Red for Dunkin'/ Green for Starbucks" src="/images/starbucks_dd/comparison_heat_map.png">
-<em>Red for Dunkin'/ Green for Starbucks</em></p>
+<p><center></p>
+<p><img alt="Red for Dunkin'/ Green for Starbucks" src="/images/starbucks_dd/comparison_heat_map.png"></p>
+<p><em>Red for Dunkin'/ Green for Starbucks</em></p>
+<p></center></p>
 <h2>Dunkin', a coffeehouse next door. Starbucks, another place for work</h2>
 <p>Compared with Starbucks' strong preference of commercial area, Dunkin's stores are also scattered evenly alongside some main streets in residential areas. That makes life easier to get 
 something near home before you go to work. However, you can still find Starbucks' stores easily in downtown area and bay area, where offices and tourists are densely concentrated. </p>
@@ -217,15 +217,18 @@ something near home before you go to work. However, you can still find Starbucks
 </pre></div>
 
 
-<p><img alt="Left for Dunkin'/ Right for Starbucks" src="/images/starbucks_dd/versus_heat_map.png">
-<em>Left for Dunkin'/ Right for Starbucks</em></p>
+<p><center></p>
+<p><img alt="Left for Dunkin'/ Right for Starbucks" src="/images/starbucks_dd/versus_heat_map.png"></p>
+<p><em>Left for Dunkin'/ Right for Starbucks</em></p>
+<p></center></p>
 <h2>Next store?</h2>
 <p>If pick up a new location for Dunkin', South Brookline or Southwest Brookline might be good choices. There are not too many coffeehouses. Besides, Route 9 is a major east–west state 
 highway in Massachusetts. <br>
-For Starbucks, Charlestown region might be good as well. It is one of fast developing places in Boston. Besides, Medical schools and luxury condos will bring Starbucks customers with needs
-and consuming capacity。
-<img alt="Next store?" src="/images/starbucks_dd/next_store.png">
-<em>Next store?</em></p>
+For Starbucks, Charlestown region might be good as well. It is one of fast developing places in Boston. Besides, Medical schools and luxury condos will bring Starbucks customers with needs and consuming capacity.</p>
+<p><center></p>
+<p><img alt="Next store?" src="/images/starbucks_dd/next_store.png"></p>
+<p><em>Next store?</em></p>
+<p></center></p>
 <h2>Almost saturated</h2>
 <p>But as customers, do we need more Dunkin' or Starbucks in Boston? Hell, no. Only the region in purple circle is not covered by any of them. But remember, we are talking about service 
 within walking distance. People still can <strong>drive</strong>. Thus the market is almost saturated if customers don't have a strong preference.</p>
@@ -237,8 +240,10 @@ within walking distance. People still can <strong>drive</strong>. Thus the marke
 </pre></div>
 
 
-<p><img alt="Almost saturated" src="/images/starbucks_dd/whole_heat_map.png">
-<em>Almost saturated</em></p>
+<p><center></p>
+<p><img alt="Almost saturated" src="/images/starbucks_dd/whole_heat_map.png"></p>
+<p><em>Almost saturated</em></p>
+<p></center></p>
 <hr>
 <h1>What's next?</h1>
 <p>You will have a deeper understanding of what kind of community that Starbucks or Dunkin' prefer. A community will be defined as a combination of different types of merchants. Do they prefer
