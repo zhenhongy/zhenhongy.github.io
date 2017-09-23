@@ -141,14 +141,49 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 </pre></div>
 
 
-<p><center>
-|Commercial|Dunkin'|Starbucks|All|
-|---:|---:|---:|---:|
-|True|70|59|129|
-|False|80|20|100|
-|All|150|79|229|
-</center>
-Dunkin' covers almost wherever there's a Starbucks shop. Suppose our tolerance of walking to a coffeehouse is only about 10 minutes. Each germ-like colored area in map represents the region with a coffeehouse covered. (Red is for Dunkin' and green is for Starbucks) Except the southwest Brookline area, Dunkin' totally wins Starbucks in the number of stores in Boston.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="right">Commercial</th>
+<th align="right">Dunkin'</th>
+<th align="right">Starbucks</th>
+<th align="right">All</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">True</td>
+<td align="right">70</td>
+<td align="right">59</td>
+<td align="right">129</td>
+</tr>
+<tr>
+<td align="right">False</td>
+<td align="right">80</td>
+<td align="right">20</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td align="right">All</td>
+<td align="right">150</td>
+<td align="right">79</td>
+<td align="right">229</td>
+</tr>
+<tr>
+<td align="right"></center></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">Dunkin' covers almost wherever there's a Starbucks shop. Suppose our tolerance of walking to a coffeehouse is only about 10 minutes. Each germ-like colored area in map represents the region with a coffeehouse covered. (Red is for Dunkin' and green is for Starbucks) Except the southwest Brookline area, Dunkin' totally wins Starbucks in the number of stores in Boston.</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
 
 <span class="k">def</span> <span class="nf">pick_color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">rank</span><span class="p">):</span>
