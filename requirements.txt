@@ -1,8 +1,0 @@
-Markdown==2.4
-pelican==3.7
-jupyter>=1.0
-ipython==3.0
-nbconvert>=4.0
-beautifulsoup4
-ghp-import==0.4.1
-matplotlib==1.5.1
