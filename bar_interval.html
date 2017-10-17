@@ -6,9 +6,9 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Bokeh Plot</title>
+<title>bar_interval</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Check out Starbucks' and Dunkin's favorite types of merchants and the difference between their preferences.">
+<meta name="description" content="(function() { var fn = function() { Bokeh.safely(function() { (function(root) { function embed_document(root) { var docs_json = {"4d5f81de-20d7-4a31-9342-aba9a496b173":{"roots":{"references":[{"attributes":{"callback":null,"tooltips":[["Merchant:","@merchant"],["Probability_starbucks:","@starbucks{0,0.000}"],["Probability_dunkin:","@dunkin{0,0.000}"]]},"id":"48d14169-5099-4dc3-90ba-8cb727ed566e","type":"HoverTool"},{"attributes":{"formatter":{"id":"3176d835-2f58-4f0a-a22c-7606adcef143","type":"BasicTickFormatter"},"plot":{"id":"a13d0c33-0d96-4234-8faf-017d01ed3311","subtype":"Figure","type":"Plot …">
 <link rel="shortcut icon" href="http://zhenhongy.github.io/images/favicon.ico" type="image/vnd.microsoft.icon">
 <meta name="author" content="Don(Zhenhong) Yang">
 <meta name="copyright" content="Don(Zhenhong) Yang">
@@ -16,19 +16,17 @@
 <meta name="twitter:site" content="@" />
 <meta property="og:site_name" content="Don & Zhenhong's Data Lab" />
 
-<meta property="og:title" content="Bokeh plot" />
+<meta property="og:title" content="Bar_interval" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://zhenhongy.github.io/bokeh-plot.html" />
+<meta property="og:url" content="http://zhenhongy.github.io/bar_interval.html" />
 <meta property="fb:app_id" content="317889598672371" />
-<meta name="twitter:title" content="Bokeh plot" />
-<meta name="twitter:url" content="http://zhenhongy.github.io/bokeh-plot.html" />
-<meta itemprop="url" content="http://zhenhongy.github.io/bokeh-plot.html" />
-<meta property="og:description" content="Check out Starbucks&#39; and Dunkin&#39;s favorite types of merchants and the difference between their preferences." />
-<meta name="twitter:description" content="Check out Starbucks&#39; and Dunkin&#39;s favorite types of merchants and the difference between their preferences." />
+<meta name="twitter:title" content="Bar_interval" />
+<meta name="twitter:url" content="http://zhenhongy.github.io/bar_interval.html" />
+<meta itemprop="url" content="http://zhenhongy.github.io/bar_interval.html" />
+<meta property="og:description" content="(function() { var fn = function() { Bokeh.safely(function() { (function(root) { function embed_document(root) { var docs_json = {&#34;4d5f81de-20d7-4a31-9342-aba9a496b173&#34;:{&#34;roots&#34;:{&#34;references&#34;:[{&#34;attributes&#34;:{&#34;callback&#34;:null,&#34;tooltips&#34;:[[&#34;Merchant:&#34;,&#34;@merchant&#34;],[&#34;Probability_starbucks:&#34;,&#34;@starbucks{0,0.000}&#34;],[&#34;Probability_dunkin:&#34;,&#34;@dunkin{0,0.000}&#34;]]},&#34;id&#34;:&#34;48d14169-5099-4dc3-90ba-8cb727ed566e&#34;,&#34;type&#34;:&#34;HoverTool&#34;},{&#34;attributes&#34;:{&#34;formatter&#34;:{&#34;id&#34;:&#34;3176d835-2f58-4f0a-a22c-7606adcef143&#34;,&#34;type&#34;:&#34;BasicTickFormatter&#34;},&#34;plot&#34;:{&#34;id&#34;:&#34;a13d0c33-0d96-4234-8faf-017d01ed3311&#34;,&#34;subtype&#34;:&#34;Figure&#34;,&#34;type&#34;:&#34;Plot …" />
+<meta name="twitter:description" content="(function() { var fn = function() { Bokeh.safely(function() { (function(root) { function embed_document(root) { var docs_json = {&#34;4d5f81de-20d7-4a31-9342-aba9a496b173&#34;:{&#34;roots&#34;:{&#34;references&#34;:[{&#34;attributes&#34;:{&#34;callback&#34;:null,&#34;tooltips&#34;:[[&#34;Merchant:&#34;,&#34;@merchant&#34;],[&#34;Probability_starbucks:&#34;,&#34;@starbucks{0,0.000}&#34;],[&#34;Probability_dunkin:&#34;,&#34;@dunkin{0,0.000}&#34;]]},&#34;id&#34;:&#34;48d14169-5099-4dc3-90ba-8cb727ed566e&#34;,&#34;type&#34;:&#34;HoverTool&#34;},{&#34;attributes&#34;:{&#34;formatter&#34;:{&#34;id&#34;:&#34;3176d835-2f58-4f0a-a22c-7606adcef143&#34;,&#34;type&#34;:&#34;BasicTickFormatter&#34;},&#34;plot&#34;:{&#34;id&#34;:&#34;a13d0c33-0d96-4234-8faf-017d01ed3311&#34;,&#34;subtype&#34;:&#34;Figure&#34;,&#34;type&#34;:&#34;Plot …" />
 <meta property="og:article:published_time" content="2017-10-17" />
 <meta property="og:article:author" content="Don(Zhenhong) Yang" >
-<meta property="og:article:tag" content="Data Visualization">
-<meta property="og:article:tag" content="Bayesian Statistics">
 <meta property="og:image" content="https://zhenhongy.github.io/images/logo.jpeg" />
 <meta property="og:image:secure_url" content="https://zhenhongy.github.io/images/logo.jpeg" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -74,16 +72,16 @@
     <div class="uk-panel" id="mg-panel-social">
         <ul class="uk-nav uk-nav-side">
             <li>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-facebook-square"></i> </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-facebook-square"></i> </a>
             </li>
             <li>
-            <a href="https://twitter.com/intent/tweet?text=Bokeh%20Plot&url=http://zhenhongy.github.io/bokeh-plot.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank"><i class="uk-icon-twitter"></i> </a>
+            <a href="https://twitter.com/intent/tweet?text=bar_interval&url=http://zhenhongy.github.io/bar_interval.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank"><i class="uk-icon-twitter"></i> </a>
             </li>
             <li>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-linkedin"></i> </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-linkedin"></i> </a>
             </li>
             <li>
-            <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button"><i class="uk-icon-google-plus-square"></i> </a>
+            <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button"><i class="uk-icon-google-plus-square"></i> </a>
             </li>
         </ul>
     </div>
@@ -93,13 +91,13 @@
 <div class="uk-width-medium-7-10">
 
     <article class="uk-article">
-        <h1 class="uk-heading-large uk-article-title" itemprop="name">Bokeh Plot</h1>
-        <p class="uk-article-meta"><time datetime="2017-10-17" itemprop="datePublished">Tue 17 October 2017</time> in <a href="http://zhenhongy.github.io/category/business.html">Business</a>, <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://zhenhongy.github.io/bokeh-plot.html#disqus_thread" itemprop="discussionUrl"></a></p>
+        <h1 class="uk-heading-large uk-article-title" itemprop="name">bar_interval</h1>
+        <p class="uk-article-meta"><time datetime="2017-10-17" itemprop="datePublished">Tue 17 October 2017</time> in <a href="http://zhenhongy.github.io/category/html.html">html</a>, <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://zhenhongy.github.io/bar_interval.html#disqus_thread" itemprop="discussionUrl"></a></p>
 
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> </a>
-        <a href="https://twitter.com/intent/tweet?text=Bokeh%20Plot&url=http://zhenhongy.github.io/bokeh-plot.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button uk-visible-small" target="_blank"><i class="uk-icon-twitter"></i> </a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-linkedin"></i> </a>
-        <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/bokeh-plot.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> </a>
+        <a href="https://twitter.com/intent/tweet?text=bar_interval&url=http://zhenhongy.github.io/bar_interval.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button uk-visible-small" target="_blank"><i class="uk-icon-twitter"></i> </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-linkedin"></i> </a>
+        <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/bar_interval.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> </a>
 
         <section itemprop="articleBody">
         
@@ -170,7 +168,8 @@
             <div class="uk-panel uk-panel-box">
                 <ul class="uk-nav uk-nav-side">
                     <li class="uk-nav-header">Categories</li>
-                    <li class="uk-active"><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+                    <li ><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+                    <li class="uk-active"><a href="http://zhenhongy.github.io/category/html.html">html</a></li>
                     <li class="uk-nav-header">Pages</li>
                     
                     <li >
@@ -244,7 +243,8 @@
 
         <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li class="uk-nav-header">Categories</li>
-            <li class="uk-active"><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+            <li ><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+            <li class="uk-active"><a href="http://zhenhongy.github.io/category/html.html">html</a></li>
             <li class="uk-nav-header">Pages</li>        
             <li >
                 <a href="http://zhenhongy.github.io/pages/about-me.html">About me</a>
