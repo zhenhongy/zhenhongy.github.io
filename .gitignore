@@ -1,0 +1,14 @@
+*.pid
+*.pyc
+cache/
+output/
+*.un~
+.idea/
+.sass-cache/
+bin
+include
+lib
+node_modules/
+_nb_header.html
+pelican-plugins/
+__pycache__/*.pyc
