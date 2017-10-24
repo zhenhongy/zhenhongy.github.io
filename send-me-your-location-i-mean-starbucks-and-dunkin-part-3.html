@@ -113,18 +113,26 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-0.html">Part 0: Get the data prepared!</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">Part 1: A glance at locations</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html">Part 2: Who are Dunkin's and Starbucks' favorite neighbors? - Emperical Bayes Analysis</a></li>
-<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-3.html">Part 3: What can we expect around a coffeeshop? - Network Visualization</a></li>
+<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-3.html">Part 3: What can we expect around a coffeehouse? - Network Visualization</a></li>
 </ul>
 <hr>
-<h1>Who are Dunkin's and Starbucks' favorite neighbors?</h1>
-<p>In this post, you would see how a community, where a Starbucks' or Dunkin's store locates, is like visually. Similar to the last post, I will start at an average level then to the individual level, where we could try our luck to segment those stores. You can also find my code 
+<h1>What can we expect around a coffeehouse?</h1>
+<p>In this post, you would see how a community, where a coffeehouse locates, is like visually. You would find out how are the components like and what are the major components for each community. Thus, this post would focus more on community for all coffeehouses. You can also find my code 
 <a href="https://github.com/zhenhongy/starbucks_dd/blob/master/Send%20me%20your%20location%2C%20I%20mean%20Starbucks%20and%20Dunkin'%20-%20Part%202.ipynb">here</a>. Enjoy!</p>
 <p>Quick review of datasets:    </p>
 <ul>
 <li><strong>nearby</strong>: The amount of merchant within 1000 meters (0.6 mile) for a given store   </li>
 </ul>
-<h2>This is test for Google Map</h2>
+<h2>Community VS Neighborhood</h2>
+<p>To differentiate from last post, this post would talk about community rather than neighborhood. I defined community as a larger area which contains multiple neighborhoods with similar components. I would focus less on comparing Starbucks' neighborhood with Dunkin's in this post since they might run business in the same community. </p>
+<h2>How many kinds of communities in Boston area?</h2>
+<p>Since we are talking about community, you might wonder if we can segment areas within Boston into some communities basing on merchant components. If we take each coffeehouses as a probe, we could get statistics of merchants within Boston area. It is reasonable because of <a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">the saturation of coffeehouse</a> in Boston area. Here is the network of coffeehouses I made. The closer in the network graph, the more similar merchant components around a coffeehouse. Feel free to explore geographic locations of any group by selecting coffeehouse below. (Tips: Either clicking or draging works. Pressing 'Shift' to keep previous selections. ) </p>
 <iframe src="/bokeh/starbucks_dd/3/coffeehouse_network.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+
+<h2>In general, Starbucks liked a more 'diversified' community</h2>
+<p>29 types of merchants have at least one strong relation with another type for Starbucks, while this number is 23 for Dunkin'. I defined a strong relation between a pair of types when more than 80% of coffeehouse have both of them in the neighborhood.</p>
+<p>For both Starbucks and Dunkin', <em>cheap restuarant</em>, <em>ATM</em>, <em>convenience store</em>, <em>cafe</em>, <em>transit station</em>, and <em>car repair store</em> are the most influential factors, that have the biggest number of strong relation, in a community. Besides, <em>park</em>, <em>home goods store</em>, <em>electronics store</em> are also in the list for Starbucks.  </p>
+<iframe src="/bokeh/starbucks_dd/3/merchant_network.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <hr>
 <h1>What's next?</h1></section>
