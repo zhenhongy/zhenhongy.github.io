@@ -112,12 +112,12 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <ul>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-0.html">Part 0: Get the data prepared!</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">Part 1: A glance at locations</a></li>
-<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html">Part 2: Who are Dunkin's and Starbucks' favorite neighbors? - Emperical Bayes Analysis</a></li>
+<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html">Part 2: Who are Dunkin's and Starbucks' favorite neighbors? - Empirical Bayes Analysis</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-3.html">Part 3: What can we expect around a coffeehouse? - Network Visualization</a></li>
 </ul>
 <hr>
 <h1>What can we expect around a coffeehouse?</h1>
-<p>In this post, you would see how a community, where a coffeehouse locates, is like visually. You would find out how are the components like and what are the major components for each community. Thus, this post would focus more on community for all coffeehouses. You can also find my code 
+<p>In this post, you would see how a community, where a coffeehouse locates, is like visually. You would find out how are the components like and what are the major components for each community. Thus, this post would focus more on community for all coffeehouses. You can also find my code and more detailed analysis
 <a href="https://github.com/zhenhongy/starbucks_dd/blob/master/Send%20me%20your%20location%2C%20I%20mean%20Starbucks%20and%20Dunkin'%20-%20Part%202.ipynb">here</a>. Enjoy!</p>
 <p>Quick review of datasets:    </p>
 <ul>
@@ -126,16 +126,36 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <h2>Community VS Neighborhood</h2>
 <p>To differentiate from last post, this post would talk about community rather than neighborhood. I defined community as a larger area which contains multiple neighborhoods with similar components. I would focus less on comparing Starbucks' neighborhood with Dunkin's in this post since they might run business in the same community. </p>
 <h2>How many kinds of communities in Boston area?</h2>
-<p>Since we are talking about community, you might wonder if we can segment areas within Boston into some communities basing on merchant components. If we take each coffeehouses as a probe, we could get statistics of merchants within Boston area. It is reasonable because of <a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">the saturation of coffeehouse</a> in Boston area. Here is the network of coffeehouses I made. The closer in the network graph, the more similar merchant components around a coffeehouse. Feel free to explore geographic locations of any group by selecting coffeehouse below. (Tips: Either clicking or draging works. Pressing 'Shift' to keep previous selections. ) </p>
+<p>Since we are talking about community, you might wonder if we can segment areas within Boston into some communities basing on merchant components. If we take each coffeehouses as a probe, we could get statistics of merchants within Boston area. It is reasonable because of <a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">the saturation of coffeehouse</a> in Boston area. Here is the network of coffeehouses I made. The closer in the network graph, the more similar merchant components around a coffeehouse. Feel free to explore geographic locations of any group by selecting coffeehouse below. (Tips: <strong>Move the map a little to make it visualizes properly.</strong> Either clicking or dragging works. Press 'shift' to keep previous selections.) </p>
 <iframe src="/bokeh/starbucks_dd/3/coffeehouse_network.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
-<h2>In general, Starbucks liked a more 'diversified' community</h2>
-<p>29 types of merchants have at least one strong relation with another type for Starbucks, while this number is 23 for Dunkin'. I defined a strong relation between a pair of types when more than 80% of coffeehouse have both of them in the neighborhood.</p>
-<p>For both Starbucks and Dunkin', <em>cheap restuarant</em>, <em>ATM</em>, <em>convenience store</em>, <em>cafe</em>, <em>transit station</em>, and <em>car repair store</em> are the most influential factors, that have the biggest number of strong relation, in a community. Besides, <em>park</em>, <em>home goods store</em>, <em>electronics store</em> are also in the list for Starbucks.  </p>
-<iframe src="/bokeh/starbucks_dd/3/merchant_network.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+<h2>Patterns of communities</h2>
+<p><center>
+    <img alt="Inconsistent" src="/images/starbucks_dd/part3/community.png">
+</center></p>
+<iframe src="/bokeh/starbucks_dd/3/community_merchants.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
+<p><strong>Yellow</strong>
+<strong>Location</strong>: Major areas of Allston and Brighton, plus lower Dorchester and parts of Roxbury       </p>
+<p><strong>Characteristics</strong>: This community is featured by the highest concentration of <em>transit station</em>, <em>cheap restaurants</em>, <em>school</em>, <em>car repair stores</em>, and <em>home goods stores</em>. This is one of the typical residential area in Boston.  </p>
+<p><strong>Green</strong>
+<strong>Location</strong>: Major areas of Fenway, South Boston, East Boston(excluding Airport), Charlestown, plus some parts of West End, Chelsea and Revere      </p>
+<p><strong>Characteristics</strong>: This community is featured by the highest concentration of <em>hospital</em>, <em>physiotherapy clinic</em>, and <em>university</em>. Besides, it also has a relatively high concentration of <em>dental clinic</em>, <em>transit station</em>, and <em>cheap restaurant</em>. It might be because of major areas for university and medical schools within Boston area. </p>
+<p><strong>Blue</strong>
+<strong>Location</strong>: Major areas of Downtown, Back Bay and some malls within residential area    </p>
+<p><strong>Characteristics</strong>: This community is featured by the highest concentration of <em>government office</em>, <em>cafe</em>, <em>atm</em>, <em>accounting firm</em>, <em>bank</em>, and <em>beauty salons</em>. However, it has an obviously low concentration of <em>car repair stores</em>, <em>transit station</em>, and <em>cheap restaurant</em>. It is the major commercial areas within Boston.</p>
+<p><strong>Purple</strong>
+<strong>Location</strong>: Major areas of Brookline, Dorchester, Airport, Chelsea, Revere, Winthrop, plus some parts of South End, Mattapan and Roxbury  </p>
+<p><strong>Characteristics</strong>: This community is featured by the highest concentration of <em>dental clinics</em>. And, it also has a high concentration of <em>transit station</em>, <em>school</em> and <em>cheap restaurant</em>. As another typical residential area, it is quite similar to the community <strong>Yellow</strong>. However, it has a higher concentration of <strong>government office</strong> and <strong>church</strong> but much lower concentration of <strong>car repair store</strong>.</p>
+<h2>Once again, Starbucks liked commercial areas A LOT</h2>
+<p>Nearly half of Starbucks' stores are in community <strong>Blue</strong>, which is the major commercial area. This number is twice of the total number of stores within community <strong>Yellow</strong> and <strong>Purple</strong>. In the meantime, Dunkin' has a slightly higher number of stores in community <strong>Yellow</strong> and <strong>Purple</strong> than in community <strong>Blue</strong>. Besides, there is no big difference between Starbucks and Dunkin' within community <strong>Green</strong>.</p>
+<iframe src="/bokeh/starbucks_dd/3/community_components.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+
+<h2>Conclusion</h2>
+<p>Boston is unique by the combination of academy, healthcare and commerce. Though Starbucks and Dunkin' do have different strategies in selecting sites, what we can expect to find around a coffeehouse depends on the specific community where the coffeehouse locates. </p>
 <hr>
-<h1>What's next?</h1></section>
+<h1>What's next?</h1>
+<p>There will be a brief summary of this series coming up soon. The summary would provide major findings and the links of each part. It would be easier to know what I did in this series.  </p></section>
         <hr class="uk-article-divider">
     </article>
 

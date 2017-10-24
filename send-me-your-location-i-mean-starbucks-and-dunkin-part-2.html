@@ -112,7 +112,7 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <ul>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-0.html">Part 0: Get the data prepared!</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-1.html">Part 1: A glance at locations</a></li>
-<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html">Part 2: Who are Dunkin's and Starbucks' favorite neighbors? - Emperical Bayes Analysis</a></li>
+<li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html">Part 2: Who are Dunkin's and Starbucks' favorite neighbors? - Empirical Bayes Analysis</a></li>
 <li><a href="https://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-3.html">Part 3: What can we expect around a coffeehouse? - Network Visualization</a></li>
 </ul>
 <hr>
@@ -126,18 +126,23 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <p>For the significance of analysis results, I combined categories as <em>other</em> if there are more than 10% of coffeehouses with no any this type of merchant around. This is the final list of categories for this post: <br>
 <em>atm, bank, beauty_salon, cafe, car_repair, church, convenience_store, electronics_store, gas_station, gym, home_goods_store, laundry, liquor_store, park, physiotherapist, restaurant_cheap, school, transit_station, other</em></p>
 <h2>Restaurants and ATMs are on FIRE!</h2>
-<p>After you get a cup of coffee from either Starbucks or Dunkin', it won't be hard for you to find a cheap resturant or an ATM. These are the same top 2 popular merchants/facilities in the neighborhood. Besides the nature of business, it might also make sense because of people grabbing a drink after a quick meal. Typically, those resturants won't serve coffee.
+<p>After you get a cup of coffee from either Starbucks or Dunkin', it won't be hard for you to find a cheap restaurant or an ATM. These are the same top 2 popular merchants/facilities in the neighborhood. Besides the nature of business, it might also make sense because of people grabbing a drink after a quick meal. Typically, those restaurants won't serve coffee.
 Most of Dunkin' and Starbucks stores are located in the area with lots of cafe stores. It shows Dunkin', Starbucks and other cafe store should share some similar strategies in choosing locations.</p>
 <iframe src="/bokeh/starbucks_dd/2/sd.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
+<h2>Starbucks liked a more 'diversified' neighborhood (Updated on October 24, 2017)</h2>
+<p>29 types of merchants have at least one strong relation with another type for Starbucks, while this number is 23 for Dunkin'. I defined a strong relation between a pair of types when more than 80% of coffeehouse have both of them in the neighborhood.</p>
+<p>For both Starbucks and Dunkin', <em>cheap restaurant</em>, <em>ATM</em>, <em>convenience store</em>, <em>cafe</em>, <em>transit station</em>, and <em>car repair store</em> are the most influential factors, that have the biggest number of strong relation. Besides, <em>park</em>, <em>home goods store</em>, <em>electronics store</em> are also in the list for Starbucks.  </p>
+<iframe src="/bokeh/starbucks_dd/3/merchant_network.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+
 <h2>Dunkin' really loves transit station, car repair store and gas station</h2>
-<p>Numerically, we can evaluate a preference for a specific type of merchant by the possibilty(statistically speaking, probability) of it within the neighborhood. Supposedly, the number of each type should follow <a href="https://en.wikipedia.org/wiki/Multinomial_distribution">Multinomial distribution</a> with a prior <a href="https://en.wikipedia.org/wiki/Dirichlet_distribution">Dirichlet distribution</a>. </p>
+<p>Numerically, we can evaluate a preference for a specific type of merchant by the possibility(statistically speaking, probability) of it within the neighborhood. Supposedly, the number of each type should follow <a href="https://en.wikipedia.org/wiki/Multinomial_distribution">Multinomial distribution</a> with a prior <a href="https://en.wikipedia.org/wiki/Dirichlet_distribution">Dirichlet distribution</a>. </p>
 <p>The plot of probability of each merchants from Bayesian model is pretty similar to the plot of the average number of each merchants in the previous part.    </p>
-<p>However, Dunkin' has a much stronger preference of transit station, car repair store, gas station and church than Starbucks. Besides, Dunkin' is more likely to be in the area with laundry store, liquor store, park and school. In contrast, Starbucks has a relatively stronger preference with bank, beauty salon and gym than Dunkin'. It basically comforms to the different markets they focuses on (i.e, commercial and bussiness districts for Starbucks; resident districts and places related to commuting, like transit station and high way, for Dunkin').</p>
+<p>However, Dunkin' has a much stronger preference of transit station, car repair store, gas station and church than Starbucks. Besides, Dunkin' is more likely to be in the area with laundry store, liquor store, park and school. In contrast, Starbucks has a relatively stronger preference with bank, beauty salon and gym than Dunkin'. It basically conforms to the different markets they focuses on (i.e, commercial and business districts for Starbucks; resident districts and places related to commuting, like transit station and high way, for Dunkin').</p>
 <iframe src="/bokeh/starbucks_dd/2/bar_interval.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <h2>Interestingly, major commercial areas are the most consistent regions for Dunkin' but the least for Starbucks</h2>
-<p>Here, calibrated <a href="http://www.stat.columbia.edu/~gelman/research/published/A6n41.pdf">Postorior Predictive P-value</a> was used to find out specific stores which was obviously different from the group. It is alternative <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-square test for independence</a> in Bayesian Statistics.</p>
+<p>Here, calibrated <a href="http://www.stat.columbia.edu/~gelman/research/published/A6n41.pdf">Posterior Predictive P-value</a> was used to find out specific stores which was obviously different from the group. It is alternative <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-square test for independence</a> in Bayesian Statistics.</p>
 <p>More than half of Starbucks stores in major commercial areas and Allston are different from the average level. In contrast, the most inconsistent regions for Dunkin' are the places outside of major commercial areas.</p>
 <p><center>
     <img alt="Inconsistent" src="/images/starbucks_dd/part2/InconsistentSummary.png">
@@ -147,15 +152,14 @@ Most of Dunkin' and Starbucks stores are located in the area with lots of cafe s
 <iframe src="/bokeh/starbucks_dd/2/regions.html" width="800" height="400" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <h2>Conclusion</h2>
-<p>Both of Starbucks are Dunkin' love staying with restaurants and ATMs. However, Starbucks prefers bank while Dunkin' stay more closely with gas stations, car reapir stores and transit stations. </p>
+<p>Both of Starbucks are Dunkin' love staying with restaurants and ATMs. However, Starbucks prefers bank while Dunkin' stay more closely with gas stations, car repair stores and transit stations. </p>
 <h2>Limitation</h2>
 <ul>
 <li>Due to a maximum of 200 results for each search, the number of merchants may not describe its actual situation well. </li>
 </ul>
 <hr>
 <h1>What's next?</h1>
-<p>You will know which type of merchant is a must for a coffeehouse in the next post. And you will also get an idea of the relation between occurance of each type of merchants. At the end,
-let's see if we can segment all coffeehouse by the pattern of relation.</p></section>
+<p>You will know different kinds of community in Boston area. Based different characteristic</p></section>
         <hr class="uk-article-divider">
     </article>
 
