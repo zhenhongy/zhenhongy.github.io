@@ -25,7 +25,7 @@
 <meta itemprop="url" content="http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html" />
 <meta property="og:description" content="Check out Starbucks&#39; and Dunkin&#39;s favorite types of merchants and the difference between their preferences." />
 <meta name="twitter:description" content="Check out Starbucks&#39; and Dunkin&#39;s favorite types of merchants and the difference between their preferences." />
-<meta property="og:article:published_time" content="2017-10-17" />
+<meta property="og:article:published_time" content="2017-10-24" />
 <meta property="og:article:author" content="Don(Zhenhong) Yang" >
 <meta property="og:article:tag" content="Data Visualization">
 <meta property="og:article:tag" content="Bayesian Statistics">
@@ -93,7 +93,7 @@
 
     <article class="uk-article">
         <h1 class="uk-heading-large uk-article-title" itemprop="name">Send me your location, I mean Starbucks and Dunkin' - Part 2</h1>
-        <p class="uk-article-meta"><time datetime="2017-10-17" itemprop="datePublished">Tue 17 October 2017</time> in <a href="http://zhenhongy.github.io/category/business.html">Business</a>, <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html#disqus_thread" itemprop="discussionUrl"></a></p>
+        <p class="uk-article-meta"><time datetime="2017-10-24" itemprop="datePublished">Tue 24 October 2017</time> in <a href="http://zhenhongy.github.io/category/business.html">Business</a>, <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html#disqus_thread" itemprop="discussionUrl"></a></p>
 
         <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> </a>
         <a href="https://twitter.com/intent/tweet?text=Send%20me%20your%20location%2C%20I%20mean%20Starbucks%20and%20Dunkin%27%20-%20Part%202&url=http://zhenhongy.github.io/send-me-your-location-i-mean-starbucks-and-dunkin-part-2.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button uk-visible-small" target="_blank"><i class="uk-icon-twitter"></i> </a>
@@ -126,8 +126,8 @@ This is an analysis about two major coffeehouse chains, Starbucks vs Dunkin' Don
 <p>For the significance of analysis results, I combined categories as <em>other</em> if there are more than 10% of coffeehouses with no any this type of merchant around. This is the final list of categories for this post: <br>
 <em>atm, bank, beauty_salon, cafe, car_repair, church, convenience_store, electronics_store, gas_station, gym, home_goods_store, laundry, liquor_store, park, physiotherapist, restaurant_cheap, school, transit_station, other</em></p>
 <h2>Restaurants and ATMs are on FIRE!</h2>
-<p>After you get a cup of coffee from either Starbucks or Dunkin', it won't be hard for you to find a cheap restaurant or an ATM. These are the same top 2 popular merchants/facilities in the neighborhood. Besides the nature of business, it might also make sense because of people grabbing a drink after a quick meal. Typically, those restaurants won't serve coffee.
-Most of Dunkin' and Starbucks stores are located in the area with lots of cafe stores. It shows Dunkin', Starbucks and other cafe store should share some similar strategies in choosing locations.</p>
+<p>After you get a cup of coffee from either Starbucks or Dunkin', it won't be hard for you to find a <em>cheap restaurant</em> or an <em>ATM</em>. These are the same top 2 popular merchants/facilities in the neighborhood. Besides the nature of business, it might also make sense for people grabbing a drink after a quick meal. Typically, those restaurants won't serve coffee.
+Most of Dunkin' and Starbucks stores are located in the area with lots of <em>cafe stores</em>. It shows Dunkin', Starbucks and other cafe store should share some similar strategies in choosing locations.</p>
 <iframe src="/bokeh/starbucks_dd/2/sd.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <h2>Starbucks liked a more 'diversified' neighborhood (Updated on October 24, 2017)</h2>
@@ -136,19 +136,16 @@ Most of Dunkin' and Starbucks stores are located in the area with lots of cafe s
 <iframe src="/bokeh/starbucks_dd/2/merchant_network.html" width="850" height="425" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <h2>Dunkin' really loves transit station, car repair store and gas station</h2>
-<p>Numerically, we can evaluate a preference for a specific type of merchant by the possibility(statistically speaking, probability) of it within the neighborhood. Supposedly, the number of each type should follow <a href="https://en.wikipedia.org/wiki/Multinomial_distribution">Multinomial distribution</a> with a prior <a href="https://en.wikipedia.org/wiki/Dirichlet_distribution">Dirichlet distribution</a>. </p>
-<p>The plot of probability of each merchants from Bayesian model is pretty similar to the plot of the average number of each merchants in the previous part.    </p>
-<p>However, Dunkin' has a much stronger preference of transit station, car repair store, gas station and church than Starbucks. Besides, Dunkin' is more likely to be in the area with laundry store, liquor store, park and school. In contrast, Starbucks has a relatively stronger preference with bank, beauty salon and gym than Dunkin'. It basically conforms to the different markets they focuses on (i.e, commercial and business districts for Starbucks; resident districts and places related to commuting, like transit station and high way, for Dunkin').</p>
+<p>Dunkin' has a much stronger preference for <em>transit station</em>, <em>car repair store</em>, <em>gas station</em> and <em>church</em> than Starbucks. Besides, Dunkin' is more likely to be in the area with <em>laundry store</em>, <em>liquor store</em>, <em>park</em> and <em>school</em>. In contrast, Starbucks has a relatively stronger preference with <em>bank</em>, <em>beauty salon</em> and <em>gym</em> than Dunkin'. It basically conforms to the different markets they focuses on (i.e, commercial and business districts for Starbucks; residential districts and places related to commuting, like transit station and high way, for Dunkin').</p>
 <iframe src="/bokeh/starbucks_dd/2/bar_interval.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
-<h2>Interestingly, major commercial areas are the most consistent regions for Dunkin' but the least for Starbucks</h2>
-<p>Here, calibrated <a href="http://www.stat.columbia.edu/~gelman/research/published/A6n41.pdf">Posterior Predictive P-value</a> was used to find out specific stores which was obviously different from the group. It is alternative <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-square test for independence</a> in Bayesian Statistics.</p>
-<p>More than half of Starbucks stores in major commercial areas and Allston are different from the average level. In contrast, the most inconsistent regions for Dunkin' are the places outside of major commercial areas.</p>
+<h2>Interestingly, Starbucks' preference could not describe its stores in major commercial area, while Dunkin's preference is less applicable in residential area</h2>
+<p>More than half of Starbucks stores in major commercial area and Allston are different from the average level. In contrast, regions, that are most distinctive to the average level, for Dunkin' are the places outside of major commercial area.</p>
 <p><center>
     <img alt="Inconsistent" src="/images/starbucks_dd/part2/InconsistentSummary.png">
 </center></p>
-<h2>Commercial areas are featured with bank and cafe while residential areas are featured with gas stations, car repair stores and transit station</h2>
-<p>For either Dunkin' or Starbucks, there are obviously less gas stations and car repair stores in major commercial areas, comparing to each of their average levels. In contrast, stores in residential areas have way less banks but more gas stations, car repair stores and transit station. Besides, the number of cafe is much smaller in the regions like Charlestown, Dorchester, Jamaica, Chelsea.</p>
+<h2>Commercial area are featured with bank and cafe while residential areas are featured with gas stations, car repair stores and transit station</h2>
+<p>For either Dunkin' or Starbucks, there are obviously less gas stations and car repair stores in major commercial area, comparing to each of their average levels. In contrast, stores in residential area have way less banks but more gas stations, car repair stores and transit station. Besides, the number of cafe is much smaller in the regions like Charlestown, Dorchester, Jamaica, Chelsea.</p>
 <iframe src="/bokeh/starbucks_dd/2/regions.html" width="800" height="400" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
 
 <h2>Conclusion</h2>
@@ -159,7 +156,7 @@ Most of Dunkin' and Starbucks stores are located in the area with lots of cafe s
 </ul>
 <hr>
 <h1>What's next?</h1>
-<p>You will know different kinds of community in Boston area. Based different characteristic</p></section>
+<p>Instead of using officially-defined region, you will know different kinds of communities in Boston area in the next post. Similar regions would be grouped into a large community based on their merchant components. You would also have an expectation of what could be more likely found around a coffeehouse.</p></section>
         <hr class="uk-article-divider">
     </article>
 
