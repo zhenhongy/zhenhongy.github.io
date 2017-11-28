@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/BlogPosting"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>To my favorite character from FRIENDS - Phoebe - Part 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<link rel="shortcut icon" href="http://zhenhongy.github.io/images/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="author" content="Don(Zhenhong) Yang">
+<meta name="copyright" content="Don(Zhenhong) Yang">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta property="og:site_name" content="Don & Zhenhong's Data Lab" />
+
+<meta property="og:title" content="To my favorite character from friends - phoebe - part 1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" />
+<meta property="fb:app_id" content="317889598672371" />
+<meta name="twitter:title" content="To my favorite character from friends - phoebe - part 1" />
+<meta name="twitter:url" content="http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" />
+<meta itemprop="url" content="http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" />
+<meta property="og:article:published_time" content="2017-11-27" />
+<meta property="og:article:author" content="Don(Zhenhong) Yang" >
+<meta property="og:article:tag" content="Data Visualization">
+<meta property="og:article:tag" content="Bokeh Server">
+<meta property="og:image" content="https://zhenhongy.github.io/images/logo.jpeg" />
+<meta property="og:image:secure_url" content="https://zhenhongy.github.io/images/logo.jpeg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta name="twitter:image" content="https://zhenhongy.github.io/images/logo.jpeg" />
+<meta itemprop="image" content="https://zhenhongy.github.io/images/logo.jpeg" />
+
+<link href="http://zhenhongy.github.io/None" type="application/atom+xml" rel="alternate" title="Don & Zhenhong's Data Lab ATOM Feed"/>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/css/uikit.min.css">
+<link rel="stylesheet" href="/theme/css/solarized.css">
+<link rel="stylesheet" href="/theme/css/main.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<header class=" mg-header uk-navbar uk-navbar-attached">
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid" data-uk-grid-margin>
+
+            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="http://zhenhongy.github.io">Don & Zhenhong's Data Lab</a>
+            <div class="mg-tagline uk-navbar-content uk-hidden-small">Let me tell you a story...</div>
+            <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
+            <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="http://zhenhongy.github.io">Don & Zhenhong's Data Lab</a>
+
+        </div>
+    </div>
+</header>
+
+<main class="mg-main">
+
+<div class="uk-container uk-container-center">
+
+    <div class="uk-grid" data-uk-grid-margin>
+        
+<div class="mg-container-social uk-width-medium-1-10 uk-hidden-small">
+
+    <div class="uk-panel" id="mg-panel-social">
+        <ul class="uk-nav uk-nav-side">
+            <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-facebook-square"></i> </a>
+            </li>
+            <li>
+            <a href="https://twitter.com/intent/tweet?text=To%20my%20favorite%20character%20from%20FRIENDS%20-%20Phoebe%20-%20Part%201&url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank"><i class="uk-icon-twitter"></i> </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button"><i class="uk-icon-linkedin"></i> </a>
+            </li>
+            <li>
+            <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button"><i class="uk-icon-google-plus-square"></i> </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="uk-width-medium-7-10">
+
+    <article class="uk-article">
+        <h1 class="uk-heading-large uk-article-title" itemprop="name">To my favorite character from FRIENDS - Phoebe - Part 1</h1>
+        <p class="uk-article-meta"><time datetime="2017-11-27" itemprop="datePublished">Mon 27 November 2017</time> in <a href="http://zhenhongy.github.io/category/entertainment.html">Entertainment</a>, <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html#disqus_thread" itemprop="discussionUrl"></a></p>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-facebook-square"></i> </a>
+        <a href="https://twitter.com/intent/tweet?text=To%20my%20favorite%20character%20from%20FRIENDS%20-%20Phoebe%20-%20Part%201&url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button uk-visible-small" target="_blank"><i class="uk-icon-twitter"></i> </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button uk-visible-small"><i class="uk-icon-linkedin"></i> </a>
+        <a href="https://plus.google.com/share?url=http://zhenhongy.github.io/to-my-favorite-character-from-friends-phoebe-part-1.html" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button uk-visible-small"><i class="uk-icon-google-plus-square"></i> </a>
+
+        <section itemprop="articleBody"><p><center>
+<img alt="Starbucks&amp;Dunkin'" src="/images/starbucks_dd/page.jpg">
+</center>
+<a href="https://www.bostonglobe.com/metro/regionals/north/2013/06/01/dunkin-donuts-and-starbucks-battle-out-for-coffee-supremacy-greater-boston/QK33ZCIAGcTNO04aVH6vJN/story.html">Credit: Boston Globe</a></p>
+<p>Silly, weird, innocent, kind, generous, brave, and etc. There could be lots of words about her. I liked her most because of the unique personality that I never seen in the real life. Wanna know how interesting she is? Watch an episode LOL! AAAAAAnyway, it is still worth reading this series. I think. :P </p>
+<ul>
+<li><a href="">Part 1: This is Phoebe Buffay</a></li>
+<li><a href="">Part 2: </a></li>
+<li><a href="">Summary</a></li>
+</ul>
+<hr>
+<h1>This is Phoebe Buffay!</h1>
+<p>In this post, you would find some basic facts about Phoebe, like the significance of role, social relationships, and her personalities. And you could also find my code <a href="">here</a>. Enjoy!</p>
+<p>S8E12 - PACMAN
+S2E17 - Smelly cat music video
+S5E14 - The One Where Everybody Finds Out</p>
+<h2>Though not the major character, Phoebe still impressed me most because of her personality</h2>
+<p>Phoebe was not the major focus for most of seasons. Except Season 7 and Season 8, Phoebe showed and spoke least, comparing to other five characters. She was kind of like Joey who didn't know others until they lived in the same building. However, Phoebe was even not closer after she moved out that area. </p>
+<iframe src="/bokeh/friends/1/significanceRole.html" width="800" height="350" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<p>However, I have the most entertaining and impressive moments from her. Like...TODO PICS</p>
+<h2>Girls, Girls, Girls</h2>
+<p><center>
+<img alt="'Girls'" src="/images/friends/1/girls.gif">
+<em>P: Hey, y’know what might cheer you up? R: What?</em>
+</center></p>
+<iframe src="https://friends11272017.herokuapp.com/relationship" width="800" height="500" frameborder="no" scrolling="no" align="left" style="position:relative; right: 40px;"></iframe>
+
+<blockquote>
+<p>"If we were in prison, you guys would be, like, my bitches."</p>
+</blockquote>
+<p>Among ten seasons, Phoebe was closer with girls than boys and Ross. Monica, the bond of social network, was in the same scene with Phoebe most (707 scenes). The second closest friend was Rachel who was in 670 scenes with her. Joey and Chandler were equally close to her. But...Ross. Maybe this scene?</p>
+<p><center>
+<img alt="'pacman'" src="/images/friends/1/pacman.gif">
+</center></p>
+<h2>Personality?</h2>
+<p>Developing...</p>
+<h2>Conclusion</h2>
+<p>Developing...</p>
+<hr>
+<h1>What's next?</h1>
+<p>Developing...</p></section>
+        <hr class="uk-article-divider">
+    </article>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'Don'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+ 
+    
+        <div class="uk-width-medium-1-5 uk-hidden-small">
+
+            <div class="uk-panel uk-panel-box">
+                <ul class="uk-nav uk-nav-side">
+                    <li class="uk-nav-header">Categories</li>
+                    <li ><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+                    <li class="uk-active"><a href="http://zhenhongy.github.io/category/entertainment.html">Entertainment</a></li>
+                    <li class="uk-nav-header">Pages</li>
+                    
+                    <li >
+                        <a href="http://zhenhongy.github.io/pages/about-me.html">About me</a>
+                    </li>
+                    
+
+                    <li class="uk-nav-divider"></li>
+                    <li ><a href="http://zhenhongy.github.io/archives.html">Archives</a></li>
+                </ul>
+            </div>
+
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title">Receive Updates</h3>
+                <a rel="alternate" type="application/atom+xml" href="http://zhenhongy.github.io/feeds/all.rss.xml" class="mg-feed"><i class="uk-icon-rss uk-icon-medium"></i> RSS</a>
+            </div>
+            
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title">Contacts</h3>
+                <a class="mg-icon-link" href="mailto:zhenhongy_1992@hotmail.com">
+                    <i class="uk-icon-envelope uk-icon-medium"></i>
+                </a>
+                <a class="mg-icon-link" href="https://twitter.com/Zhenhong1992">
+                    <i class="uk-icon-twitter uk-icon-medium"></i>
+                </a>
+                <a class="mg-icon-link" href="https://www.linkedin.com/in/zhenhongyang/">
+                    <i class="uk-icon-linkedin uk-icon-medium"></i>
+                </a>
+                <a class="mg-icon-link" href="https://github.com/zhenhongy">
+                    <i class="uk-icon-github uk-icon-medium"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer class="mg-footer">
+    <div class="uk-container uk-container-center uk-text-center">
+
+        <div class="mg-icons-small uk-subnav uk-visible-small">
+            <li><a rel="alternate" type="application/atom+xml" href="http://zhenhongy.github.io/None" class="uk-icon-button uk-icon-rss"></a></li>
+            <li>
+                <a href="mailto:zhenhongy_1992@hotmail.com" class="uk-icon-button uk-icon-envelope"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Zhenhong1992" class="uk-icon-button uk-icon-twitter"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/zhenhongyang/" class="uk-icon-button uk-icon-linkedin"></a>
+            </li>
+            <li>
+                <a href="https://github.com/zhenhongy" class="uk-icon-button uk-icon-github"></a>
+            </li>
+        </div>
+
+        <div class="mg-author uk-panel">
+            <p></p>
+
+            <p>Powered by <a href="http://blog.getpelican.com">Pelican</a>.<br class="uk-visible-small"> Theme <a href="https://github.com/lucachr/pelican-mg">mg</a> by <a href="https://github.com/lucachr">Luca Chiricozzi</a>.</p>
+        </div>
+    </div> 
+</footer>
+
+<div id="mg-offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+            <li class="uk-nav-header">Categories</li>
+            <li ><a href="http://zhenhongy.github.io/category/business.html">Business</a></li>
+            <li class="uk-active"><a href="http://zhenhongy.github.io/category/entertainment.html">Entertainment</a></li>
+            <li class="uk-nav-header">Pages</li>        
+            <li >
+                <a href="http://zhenhongy.github.io/pages/about-me.html">About me</a>
+            </li>
+                    
+
+            <li class="uk-nav-divider"></li>
+            <li><a href="http://zhenhongy.github.io/">Archives</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.15.0/js/uikit.min.js"></script>
+<script src="/theme/js/jquery.sticky-kit.js"></script>
+<script src="/theme/js/plugins.js"></script>
+<script src="/theme/js/main.js"></script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'Don'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+ var s = document.createElement('script'); s.async = true;
+ s.type = 'text/javascript';
+ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+ (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+ }());
+</script>
+
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+ e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+ e.src='//www.google-analytics.com/analytics.js';
+ r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-106946855-1');ga('send','pageview');
+</script>
+
+</body>
+</html>
